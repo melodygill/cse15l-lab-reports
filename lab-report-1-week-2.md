@@ -48,3 +48,10 @@ Make sure to copy your public key, stored on your computer in `id_rsa.pub`, into
 ![Image](report1_nopassword.png)
 
 ## Optimizing remote running
+There are some tricks you can use to decrease the amount of time it takes to copy changes from local to remote, compile, and run remotely. Here is a set of commands you can use to accomplish this a little faster.
+```
+scp [file name] cs15lwi22aao@ieng6.ucsd.edu:[directory path]
+ssh [username] "javac [file name]";"java [file name]"
+```
+
+![Image](report1_faster.png)
