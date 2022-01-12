@@ -28,8 +28,18 @@ Here are some useful commands to try both in your local environment and on the s
 - `cd` - change directory
 - `ls` - list files (-a shows hidden files). `dir` is similar for Windows
 - `pwd` - print working directory
-- `mkdir` [name] - make directory
-- `cat` [file name] - prints contents of file
+- `mkdir [name]` - make directory
+- `cat [file name]` - prints contents of file
 - `exit`, `logout`, or ctrl-d - log out of the remote server
 
 ![Image](report1_commands.png)
+
+## Move files with scp
+scp (secure copy) is the command to copy files from one computer to another. Assuming you are copying from local to remote, the syntax is:
+```scp [file name] cs15lwi22aao@ieng6.ucsd.edu:~/```
+The part of the command after the `:` is the directory path that the file will be copied to. `~` means the default directory on the remote server.
+![Image](labreport1_scp.png)
+
+## SSH key
+
+## Optimizing remote running
