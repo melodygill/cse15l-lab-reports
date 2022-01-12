@@ -41,5 +41,10 @@ The part of the command after the `:` is the directory path that the file will b
 ![Image](labreport1_scp.png)
 
 ## SSH key
+Setting up an SSH key will make it so that you don't have to enter your password every time you interact with the remote server. I already had mine mostly set up, but I did have to follow [some extra steps](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) because I use Windows.
+
+Make sure to copy your public key, stored on your computer in `id_rsa.pub`, into a new folder called `.ssh` that you create on the remote server. Then you will be able to log in without entering your password, as you can see me do here:
+
+![Image](report1_nopassword.png)
 
 ## Optimizing remote running
