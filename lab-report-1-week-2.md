@@ -49,6 +49,10 @@ Make sure to copy your public key, stored on your computer in `id_rsa.pub`, into
 
 ## Optimizing remote running
 There are some tricks you can use to decrease the amount of time it takes to copy changes from local to remote, compile, and run remotely. Here is a set of commands you can use to accomplish this a little faster.
+
+If you're typing them for the first time, you will need to copy/paste the commands into your terminal and fill in the blanks.
+
+Once you have the commands in your terminal history, your 5 keystrokes will be: up arrow, up arrow, enter, down arrow, enter.
 ```
 scp [file name] cs15lwi22aao@ieng6.ucsd.edu:[directory path]
 ssh [username] "javac [file name]";"java [file name]"
