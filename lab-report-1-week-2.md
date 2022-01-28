@@ -1,6 +1,6 @@
 
 
-# CSE 15L Week 1 Lab: Logging into ieng6 course-specific accounts
+# CSE 15L Week 2 Lab: Logging into ieng6 course-specific accounts
 [Home](index.html)
 1. Install VSCode
 2. Connect to the remote server
