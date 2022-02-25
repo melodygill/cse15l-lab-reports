@@ -3,9 +3,9 @@
 
 This report shows the process of testing and debugging `MarkdownParse.java`.
 
-Link to my `markdown-parse` repository: 
+Link to my `markdown-parse` repository: [CSE15L-Panther](https://github.com/melodygill/CSE15L-Panther)
 
-Link to the repository I reviewed:
+Link to the repository I reviewed: [markdown-parse](https://github.com/ShashankVenkatramani/markdown-parse/)
 
 ## Snippet 1
 The test in `MarkdownParseTest.java` that corresponds to this snippet, which is copied into `snippet1.md`:
@@ -31,7 +31,16 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
         at MarkdownParseTest.snippet1(MarkdownParseTest.java:100)
 ```
 
-For the implementation you reviewed, the corresponding output when running the tests; if it passed, say so. If it didn’t pass, show the specific part of the JUnit output that shows the test failure.
+The implementation I reviewed: test failed with the following output.
+```
+3) snippet1(MarkdownParseTest)
+java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was:<[url.com, `google.com, google.com, ucsd.edu]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet1(MarkdownParseTest.java:83)
+```
 
 ## Snippet 2
 The test in `MarkdownParseTest.java` that corresponds to this snippet, which is copied into `snippet2.md`:
@@ -54,6 +63,16 @@ java.lang.AssertionError: expected:<[a.com, a.com(()), example.com]> but was:<[a
         at org.junit.Assert.assertEquals(Assert.java:146)
         at MarkdownParseTest.snippet2(MarkdownParseTest.java:108)
 ```
+The implementation I reviewed: test failed with the following output.
+```
+4) snippet2(MarkdownParseTest)
+java.lang.AssertionError: expected:<[a.com, a.com(()), example.com]> but was:<[a.com, b.com, a.com, example.com]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet2(MarkdownParseTest.java:91)
+```
 
 ## Snippet 3
 The test in `MarkdownParseTest.java` that corresponds to this snippet, which is copied into `snippet3.md`:
@@ -75,6 +94,16 @@ java.lang.AssertionError: expected:<[https://www.twitter.com, https://ucsd-cse15
         at org.junit.Assert.assertEquals(Assert.java:120)
         at org.junit.Assert.assertEquals(Assert.java:146)
         at MarkdownParseTest.snippet3(MarkdownParseTest.java:116)
+```
+The implementation I reviewed: test failed with the following output.
+```
+5) snippet3(MarkdownParseTest)
+]>https://cse.ucsd.edu/22.github.io/[https://www.twitter.com, https://ucsd-cse15l-w22.github.io/, https://cse.ucsd.edu/]> but was:<[https://www.twitter.com
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet3(MarkdownParseTest.java:99)
 ```
 
 q&a :^)
