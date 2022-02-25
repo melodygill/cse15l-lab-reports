@@ -19,7 +19,18 @@ The test in `MarkdownParseTest.java` that corresponds to this snippet, which is 
     }
 ```
 
-For your implementation, the corresponding output when running the tests; if it passed, say so. If it didn’t pass, show the specific part of the JUnit output that shows the test failure.
+
+My implementation: test failed with the following output.
+```
+1) snippet1(MarkdownParseTest)
+java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was:<[`google.com, google.com]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet1(MarkdownParseTest.java:100)
+```
+
 For the implementation you reviewed, the corresponding output when running the tests; if it passed, say so. If it didn’t pass, show the specific part of the JUnit output that shows the test failure.
 
 ## Snippet 2
@@ -33,6 +44,16 @@ The test in `MarkdownParseTest.java` that corresponds to this snippet, which is 
         assertEquals(expected, MarkdownParse.getLinks(contents));
     }
 ```
+My implementation: test failed with the following output.
+```
+2) snippet2(MarkdownParseTest)
+java.lang.AssertionError: expected:<[a.com, a.com(()), example.com]> but was:<[a.com, a.com((]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet2(MarkdownParseTest.java:108)
+```
 
 ## Snippet 3
 The test in `MarkdownParseTest.java` that corresponds to this snippet, which is copied into `snippet3.md`:
@@ -41,9 +62,19 @@ The test in `MarkdownParseTest.java` that corresponds to this snippet, which is 
     public void snippet3() throws IOException {
         Path fileName = Path.of("./snippet3.md");
 	    String contents = Files.readString(fileName);
-        List<String> expected = List.of("https://www.twitter.com", "https://ucsd-cse15l-w22.github.io/", "(https://cse.ucsd.edu/");
+        List<String> expected = List.of("https://www.twitter.com", "https://ucsd-cse15l-w22.github.io/", "https://cse.ucsd.edu/");
         assertEquals(expected, MarkdownParse.getLinks(contents));
     }
+```
+My implementation: test failed with the following output.
+```
+3) snippet3(MarkdownParseTest)
+java.lang.AssertionError: expected:<[https://www.twitter.com, https://ucsd-cse15l-w22.github.io/, https://cse.ucsd.edu/]> but was:<[]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at MarkdownParseTest.snippet3(MarkdownParseTest.java:116)
 ```
 
 q&a :^)
