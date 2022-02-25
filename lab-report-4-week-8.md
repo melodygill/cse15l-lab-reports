@@ -109,16 +109,16 @@ The implementation I reviewed: test failed with the following output.
 ## Questions
 Answer the following questions with 2-3 sentences each:
 
-1. Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.
+- Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 Yes, I think I could fix the backticks problem easily. 2 out of the 3 links in snippet 1 were processed correctly by my program. I would just rearrange some of the lines of code so that it ignores close brackets within backtick segments (which was the problem that caused failure with the 3rd link).
 
 
-2. Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
+- Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 I think it would be a more involved change, like changing the structure of my program, to make my program work for snippet 2. I would have to add code to ignore escape characters, and also change the way that the program parses parentheses and brackets for it to process nested parentheses properly. Most likely I would use a stack to match parentheses and brackets before I decided if they were valid parts of the link syntax, which I think would take more than 10 lines.
 
     
-3. Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
+- Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 I believe that markdown displays 2 out of the 3 links in snippet 3 as links because they start with `https://`, not because of the `[text](link)` format. If I were to code it so that my program displays `https://` links, it would probably take less than 10 lines of code. I don't know why my program is failing with the other link that involves newlines in the parentheses portion of the markdown link syntax, but I'm guessing it would take less than 10 lines of code to make my program ignore whitespace characters surrounding links.
