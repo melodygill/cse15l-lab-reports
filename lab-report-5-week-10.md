@@ -1,7 +1,7 @@
-# CSE 15L Week 8 Lab: Large Amounts of Tests
+# CSE 15L Week 10 Lab: Large Amounts of Tests
 [Home](index.html)
 
-I found the tests with different results by using the `diff` command. I saved the results of running the two versions of `MarkdownParse` into two files, and then ran `diff` on them to find the differences in output.
+I found tests with different results by using the `diff` command. I saved the results of running the two versions of `MarkdownParse` into two files, and then ran `diff` on them to find the differences in output.
 
 
 ## Test 194
