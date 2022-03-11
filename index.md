@@ -9,6 +9,8 @@
 <br>
 [Lab Report 4](lab-report-4-week-8.md)
 <br>
+[Lab Report 5](lab-report-5-week-10.md)
+<br>
 [Page 2](page2)
 
 ![Image](lab2screenshot.png)
